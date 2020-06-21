@@ -8,10 +8,10 @@ function DataFetch() {
     useEffect(() => {
 		axios({
 			"method": "GET",
-			"url": 'https://newsapi.org/v2/top-headlines?country=in&apiKey=6a03890e573d45889d2ec25ce7e42b66',
+			"url": 'https://news18-api.herokuapp.com/api/headlines',
 		})
 			.then((res) => {
-                setPosts(res.data.articles)
+                setPosts(res.data)
                 setLoading(false);
 			})
 			.catch((error) => {
@@ -27,7 +27,7 @@ function DataFetch() {
         return (
             <div className="row">
                 {posts.map((news) =>
-                    <Cards Title={news.title} Image={news.urlToImage} />
+                    <Cards Title={news.Title} Image={news.ImageLink} />
                 )}
             </div>
         )
