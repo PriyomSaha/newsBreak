@@ -1,19 +1,20 @@
 import React, { useEffect } from 'react'
-function NavBar({open}) {
+
+function NavBar({ open }) {
+
     useEffect(() => {
         var element = document.getElementsByClassName("type")[0]
-      if (open)
-        {
+        if (open) {
             //document.getElementsByClassName("type")[0].style.visibility = "visible";
             element.classList.add("sidebar");
         }
-        else{
+        else {
             //document.getElementsByClassName("type")[0].style.visibility = "hidden";
             element.classList.remove("sidebar");
         }
 
     }, [open])
-    
+
     return (
         <>
             <ul className="type">

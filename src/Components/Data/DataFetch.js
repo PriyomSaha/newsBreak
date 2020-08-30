@@ -1,9 +1,10 @@
-import React,{useEffect,useState} from 'react'
+import React from 'react'
+/*import React,{useEffect,useState} from 'react'
 import axios from 'axios';
-import Cards from './Cards'
+import Cards from './Cards'*/
 
 function DataFetch() {
-    const [posts, setPosts] = useState([])
+   /* const [posts, setPosts] = useState([])
     const [loading, setLoading] = useState(true)
     useEffect(() => {
 		axios({
@@ -18,12 +19,12 @@ function DataFetch() {
 				console.log(error)
 			})
 	}, [])
-    if(loading)
-    {
+    /*if(loading)
+    {*/
         return(<div className="row" style={{textAlign:'center'}}><h1>Loading...</h1></div>)
-    }
+    //}
 
-    else{
+    /*else{
         return (
             <div className="row">
                 {posts.map((news) =>
@@ -31,7 +32,7 @@ function DataFetch() {
                 )}
             </div>
         )
-    }
+    }*/
 }
 
 export default DataFetch
